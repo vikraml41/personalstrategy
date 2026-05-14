@@ -77,6 +77,9 @@ def main() -> None:
         .nlargest(MOMENTUM_PREFILTER)
         .index.tolist()
     )
+    if not top_candidates:
+        logger.error("No stock candidates after momentum filter — universe fetch likely failed. Aborting.")
+        sys.exit(1)
     logger.info("Pre-filter: top %d stocks by momentum (ETFs excluded from scoring)", len(top_candidates))
 
     # ── 4. Fundamentals ───────────────────────────────────────────────
