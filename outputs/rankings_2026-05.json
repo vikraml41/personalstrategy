@@ -1,0 +1,114 @@
+[
+  {
+    "ticker": "XLK",
+    "composite": 0.3832366869654672,
+    "momentum_score": 0.9277565504326006,
+    "value_score": 0.03466876226407679,
+    "quality_score": 0.0,
+    "decile": 1
+  },
+  {
+    "ticker": "XLB",
+    "composite": 0.2888015674502234,
+    "momentum_score": 0.3883170818338191,
+    "value_score": 0.38135638490484497,
+    "quality_score": 0.0,
+    "decile": 1
+  },
+  {
+    "ticker": "XLE",
+    "composite": 0.26338321922948993,
+    "momentum_score": 0.5067822131683888,
+    "value_score": 0.17334381132038404,
+    "quality_score": 0.0,
+    "decile": 2
+  },
+  {
+    "ticker": "IWM",
+    "composite": 0.26277515731592205,
+    "momentum_score": 0.7479433942330068,
+    "value_score": -0.1040062867922305,
+    "quality_score": 0.0,
+    "decile": 3
+  },
+  {
+    "ticker": "QQQ",
+    "composite": 0.14200959670959304,
+    "momentum_score": 0.688710828565722,
+    "value_score": -0.3813563849048451,
+    "quality_score": 0.0,
+    "decile": 4
+  },
+  {
+    "ticker": "SPY",
+    "composite": 0.047118430759173296,
+    "momentum_score": 0.3301422457654038,
+    "value_score": -0.2426813358485378,
+    "quality_score": 0.0,
+    "decile": 4
+  },
+  {
+    "ticker": "XLI",
+    "composite": -0.02548771199849101,
+    "momentum_score": 0.20929722283337748,
+    "value_score": -0.31201886037669146,
+    "quality_score": 0.0,
+    "decile": 5
+  },
+  {
+    "ticker": "XLRE",
+    "composite": -0.05949699806700235,
+    "momentum_score": -0.14874249516750587,
+    "value_score": 0.0,
+    "quality_score": 0.0,
+    "decile": 6
+  },
+  {
+    "ticker": "XLC",
+    "composite": -0.059602771026889295,
+    "momentum_score": -0.14900692756722322,
+    "value_score": 0.0,
+    "quality_score": 0.0,
+    "decile": 7
+  },
+  {
+    "ticker": "XLU",
+    "composite": -0.07044789562792154,
+    "momentum_score": -0.4491362418994087,
+    "value_score": 0.3120188603766913,
+    "quality_score": 0.0,
+    "decile": 7
+  },
+  {
+    "ticker": "XLY",
+    "composite": -0.16621819985306502,
+    "momentum_score": -0.627891668500133,
+    "value_score": 0.2426813358485377,
+    "quality_score": 0.0,
+    "decile": 8
+  },
+  {
+    "ticker": "XLP",
+    "composite": -0.19168279059230342,
+    "momentum_score": -0.4488718094996913,
+    "value_score": -0.034668762264076884,
+    "quality_score": 0.0,
+    "decile": 9
+  },
+  {
+    "ticker": "XLV",
+    "composite": -0.28689127542238396,
+    "momentum_score": -0.8082336894991615,
+    "value_score": 0.10400628679223037,
+    "quality_score": 0.0,
+    "decile": 10
+  },
+  {
+    "ticker": "XLF",
+    "composite": -0.5274970158418134,
+    "momentum_score": -1.1670667046991972,
+    "value_score": -0.17334381132038418,
+    "quality_score": 0.0,
+    "decile": 10
+  }
+]

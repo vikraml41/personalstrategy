@@ -1,0 +1,26 @@
+{
+  "holdings": [
+    "XLK",
+    "XLB",
+    "XLE"
+  ],
+  "weights": {
+    "XLK": 0.3333333333333333,
+    "XLB": 0.3333333333333333,
+    "XLE": 0.3333333333333333
+  },
+  "sector_counts": {
+    "Unknown": 3
+  },
+  "llm_exits": [],
+  "llm_boosts": [],
+  "llm_half_weight": [],
+  "regime": {
+    "equity_fraction": 1.0,
+    "momentum_weight_adj": 1.0,
+    "value_weight_adj": 1.0,
+    "regime_triggered": false,
+    "crash_triggered": false
+  },
+  "sells": []
+}
