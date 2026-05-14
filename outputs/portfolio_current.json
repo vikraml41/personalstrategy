@@ -1,16 +1,58 @@
 {
   "holdings": [
-    "XLK",
-    "XLB",
-    "XLE"
+    "APA",
+    "VTRS",
+    "VLO",
+    "JBHT",
+    "NEM",
+    "CF",
+    "HAL",
+    "HST",
+    "HPE",
+    "AIZ",
+    "BEN",
+    "DELL",
+    "BIIB",
+    "PFG",
+    "NUE",
+    "DAL",
+    "BMY",
+    "TSN",
+    "WBD",
+    "EME"
   ],
   "weights": {
-    "XLK": 0.3333333333333333,
-    "XLB": 0.3333333333333333,
-    "XLE": 0.3333333333333333
+    "APA": 0.05,
+    "VTRS": 0.05,
+    "VLO": 0.05,
+    "JBHT": 0.05,
+    "NEM": 0.05,
+    "CF": 0.05,
+    "HAL": 0.05,
+    "HST": 0.05,
+    "HPE": 0.05,
+    "AIZ": 0.05,
+    "BEN": 0.05,
+    "DELL": 0.05,
+    "BIIB": 0.05,
+    "PFG": 0.05,
+    "NUE": 0.05,
+    "DAL": 0.05,
+    "BMY": 0.05,
+    "TSN": 0.05,
+    "WBD": 0.05,
+    "EME": 0.05
   },
   "sector_counts": {
-    "Unknown": 3
+    "Energy": 3,
+    "Healthcare": 3,
+    "Industrials": 3,
+    "Basic Materials": 3,
+    "Real Estate": 1,
+    "Technology": 2,
+    "Financial Services": 3,
+    "Consumer Defensive": 1,
+    "Communication Services": 1
   },
   "llm_exits": [],
   "llm_boosts": [],
@@ -22,5 +64,9 @@
     "regime_triggered": false,
     "crash_triggered": false
   },
-  "sells": []
+  "sells": [
+    "XLE",
+    "XLK",
+    "XLB"
+  ]
 }
