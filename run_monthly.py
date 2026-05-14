@@ -28,7 +28,7 @@ from strategy.report import (
 )
 from strategy.scorer import compute_composite_scores
 from strategy.signals import compute_all_signals, compute_momentum_signals
-from strategy.universe import get_universe
+from strategy.universe import CORE_ETFS, get_universe
 
 logging.basicConfig(
     level=logging.INFO,
@@ -69,12 +69,15 @@ def main() -> None:
         logger.error("Momentum computation failed: %s", exc)
         sys.exit(1)
 
+    _etf_set = set(CORE_ETFS)
+    # ETFs are fallback only — exclude them from scored candidates
+    stocks_only = mom_df[~mom_df.index.isin(_etf_set)]
     top_candidates = (
-        mom_df["M_composite"]
+        stocks_only["M_composite"]
         .nlargest(MOMENTUM_PREFILTER)
         .index.tolist()
     )
-    logger.info("Pre-filter: top %d by momentum", len(top_candidates))
+    logger.info("Pre-filter: top %d stocks by momentum (ETFs excluded from scoring)", len(top_candidates))
 
     # ── 4. Fundamentals ───────────────────────────────────────────────
     logger.info("Step 4/9  Fetching fundamentals (this takes a few minutes)...")

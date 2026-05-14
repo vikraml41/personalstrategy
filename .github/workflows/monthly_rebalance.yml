@@ -44,6 +44,10 @@ jobs:
           git diff --staged --quiet || git commit -m "chore: monthly rebalance $(date +%Y-%m)"
           git push
 
+      - name: Get current date
+        id: date
+        run: echo "month=$(date +%Y-%m)" >> $GITHUB_OUTPUT
+
       - name: Format email body
         id: email
         run: |
@@ -112,7 +116,7 @@ jobs:
           server_port: 587
           username: ${{ secrets.EMAIL_ADDRESS }}
           password: ${{ secrets.EMAIL_APP_PASSWORD }}
-          subject: "📈 Monthly Rebalance — ${{ github.event.repository.name }} ($(date +%Y-%m))"
+          subject: "📈 Monthly Rebalance — ${{ github.event.repository.name }} (${{ steps.date.outputs.month }})"
           to: ${{ secrets.EMAIL_ADDRESS }}
           from: ${{ secrets.EMAIL_ADDRESS }}
           body: file:///tmp/email_body.txt
