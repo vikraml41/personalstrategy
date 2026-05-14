@@ -180,13 +180,16 @@ def generate_html_report(
     cra_txt = "TRIGGERED ⚠️" if regime.get("crash_triggered")  else "OFF ✅"
 
     # ── Chart ─────────────────────────────────────────────────────────
+    # Gmail blocks base64 inline images — chart is sent as an email attachment instead.
     chart_section = ""
     if chart_b64:
-        chart_section = f"""
-        <div style="background:white;margin:8px 4px;padding:20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.08)">
+        chart_section = """
+        <div style="background:white;margin:8px 4px;padding:16px 20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.08)">
           <h2 style="color:#1a1a2e;border-bottom:2px solid #eee;padding-bottom:8px;margin-top:0">📊 Charts</h2>
-          <img src="data:image/png;base64,{chart_b64}" alt="Portfolio Charts"
-               style="width:100%;border-radius:8px;display:block" />
+          <p style="color:#666;font-size:0.9em;margin:0">
+            Factor score breakdown and 3-month price performance chart attached as
+            <strong>portfolio_chart.png</strong>. Tap the attachment below to view.
+          </p>
         </div>"""
 
     # ── LLM alerts ────────────────────────────────────────────────────

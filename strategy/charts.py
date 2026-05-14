@@ -43,6 +43,7 @@ def generate_portfolio_chart(
     scores_df: pd.DataFrame,
     portfolio: dict,
     prices: pd.DataFrame,
+    save_path: str | None = "/tmp/portfolio_chart.png",
 ) -> str | None:
     """
     Build and return a base64-encoded PNG string for the email.
@@ -132,13 +133,19 @@ def generate_portfolio_chart(
         )
         _apply_dark_style(ax2)
 
-        # ── Encode ────────────────────────────────────────────────────
+        # ── Save to file (for email attachment — Gmail blocks base64 inline) ──
         buf = io.BytesIO()
         plt.savefig(buf, format="png", dpi=130, bbox_inches="tight",
                     facecolor=fig.get_facecolor())
         plt.close(fig)
         buf.seek(0)
-        return base64.b64encode(buf.read()).decode("utf-8")
+        png_bytes = buf.read()
+
+        if save_path:
+            with open(save_path, "wb") as f:
+                f.write(png_bytes)
+
+        return base64.b64encode(png_bytes).decode("utf-8")
 
     except Exception as exc:
         logger.warning("Chart generation failed: %s", exc)
