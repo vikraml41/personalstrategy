@@ -41,3 +41,71 @@ jobs:
           git add outputs/
           git diff --staged --quiet || git commit -m "chore: weekly LLM scan $(date +%Y-%m-%d)"
           git push
+
+      - name: Format email body
+        run: |
+          python - <<'PYEOF'
+          import json, pathlib, sys
+          from datetime import date
+
+          scores_files = sorted(pathlib.Path("outputs").glob("llm_scores_*.json"), reverse=True)
+          if not scores_files:
+              print("No LLM score files found.")
+              sys.exit(0)
+
+          data      = json.loads(scores_files[0].read_text())
+          overrides = data.get("overrides", {})
+          scores    = data.get("scores", {})
+
+          exits      = overrides.get("exits", [])
+          boosts     = overrides.get("boosts", [])
+          half_w     = overrides.get("half_weight", [])
+
+          lines = [
+              f"Weekly LLM Scan — {date.today()}",
+              "=" * 50,
+              "",
+          ]
+
+          if exits:
+              lines.append(f"⚠️  RISK-FLAG EXITS (removed from portfolio): {exits}")
+          else:
+              lines.append("✅  No risk-flag exits this week.")
+
+          if boosts:
+              lines.append(f"🚀  Post-earnings boosts (take effect next rebal): {boosts}")
+          if half_w:
+              lines.append(f"⚡  Half-weight flags: {half_w}")
+
+          lines += ["", "Top sentiment scores this week:"]
+          sorted_scores = sorted(
+              scores.items(),
+              key=lambda x: x[1].get("sentiment", 50),
+              reverse=True,
+          )[:10]
+          for ticker, s in sorted_scores:
+              lines.append(
+                  f"  {ticker:<8} sentiment={s.get('sentiment',50):.0f}  "
+                  f"surprise={s.get('surprise',0):.0f}  "
+                  f"risk={s.get('risk_flag',0):.0f}  — {s.get('rationale','')}"
+              )
+
+          lines += ["", "— Momentum × Value × LLM Strategy"]
+          body = "\n".join(lines)
+
+          with open("/tmp/email_body.txt", "w") as f:
+              f.write(body)
+          print(body)
+          PYEOF
+
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_ADDRESS }}
+          password: ${{ secrets.EMAIL_APP_PASSWORD }}
+          subject: "🔍 Weekly LLM Scan — ${{ github.event.repository.name }}"
+          to: ${{ secrets.EMAIL_ADDRESS }}
+          from: ${{ secrets.EMAIL_ADDRESS }}
+          body: file:///tmp/email_body.txt

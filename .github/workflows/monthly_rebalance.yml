@@ -43,3 +43,76 @@ jobs:
           git add outputs/
           git diff --staged --quiet || git commit -m "chore: monthly rebalance $(date +%Y-%m)"
           git push
+
+      - name: Format email body
+        id: email
+        run: |
+          python - <<'PYEOF'
+          import json, pathlib, sys
+
+          trades_files = sorted(pathlib.Path("outputs").glob("trades_*.json"), reverse=True)
+          portfolio_path = pathlib.Path("outputs/portfolio_current.json")
+
+          if not trades_files or not portfolio_path.exists():
+              print("No output files found — skipping email.")
+              sys.exit(0)
+
+          trades    = json.loads(trades_files[0].read_text())
+          portfolio = json.loads(portfolio_path.read_text())
+
+          buys     = trades.get("buys", [])
+          sells    = trades.get("sells", [])
+          holdings = trades.get("holdings_after", [])
+          weights  = portfolio.get("weights", {})
+          regime   = portfolio.get("regime", {})
+          exits    = portfolio.get("llm_exits", [])
+          boosts   = portfolio.get("llm_boosts", [])
+
+          lines = [
+              f"Monthly Rebalance Report — {trades.get('month', '')}",
+              "=" * 50,
+              "",
+              f"▶ BUYS  ({len(buys)}): {', '.join(buys) if buys else 'none'}",
+              f"▶ SELLS ({len(sells)}): {', '.join(sells) if sells else 'none'}",
+              "",
+              f"Current portfolio ({len(holdings)} stocks):",
+          ]
+          for t in holdings:
+              half = "  [half weight]" if t in portfolio.get("llm_half_weight", []) else ""
+              lines.append(f"  {t:<8} {weights.get(t, 0):>6.1%}{half}")
+
+          cash_ticker = next((k for k in ("SGOV", "BIL") if k in weights), None)
+          if cash_ticker:
+              lines.append(f"  {cash_ticker:<8} {weights[cash_ticker]:>6.1%}  (cash buffer)")
+
+          lines += [
+              "",
+              "Risk overlay:",
+              f"  Equity fraction : {regime.get('equity_fraction', 1.0):.0%}",
+              f"  Regime filter   : {'TRIGGERED' if regime.get('regime_triggered') else 'off'}",
+              f"  Crash filter    : {'TRIGGERED' if regime.get('crash_triggered') else 'off'}",
+          ]
+          if exits:
+              lines.append(f"\nLLM risk-flag exits : {exits}")
+          if boosts:
+              lines.append(f"LLM post-earnings boosts : {boosts}")
+
+          lines += ["", "— Momentum × Value × LLM Strategy"]
+          body = "\n".join(lines)
+
+          with open("/tmp/email_body.txt", "w") as f:
+              f.write(body)
+          print(body)
+          PYEOF
+
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_ADDRESS }}
+          password: ${{ secrets.EMAIL_APP_PASSWORD }}
+          subject: "📈 Monthly Rebalance — ${{ github.event.repository.name }} ($(date +%Y-%m))"
+          to: ${{ secrets.EMAIL_ADDRESS }}
+          from: ${{ secrets.EMAIL_ADDRESS }}
+          body: file:///tmp/email_body.txt
