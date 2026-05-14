@@ -1,53 +1,23 @@
 {
   "date": "2026-05-14",
   "month": "2026-05",
-  "buys": [
-    "AIZ",
-    "APA",
-    "BEN",
-    "BIIB",
-    "BMY",
-    "CF",
-    "DAL",
-    "DELL",
-    "EME",
-    "HAL",
-    "HPE",
-    "HST",
-    "JBHT",
-    "NEM",
-    "NUE",
-    "PFG",
-    "TSN",
-    "VLO",
-    "VTRS",
-    "WBD"
-  ],
+  "buys": [],
   "sells": [
-    "XLB",
-    "XLE",
-    "XLK"
+    "BMY",
+    "EME",
+    "TSN",
+    "WBD"
   ],
   "holdings_after": [
     "AIZ",
     "APA",
     "BEN",
-    "BIIB",
-    "BMY",
     "CF",
-    "DAL",
-    "DELL",
-    "EME",
-    "HAL",
     "HPE",
     "HST",
     "JBHT",
     "NEM",
-    "NUE",
-    "PFG",
-    "TSN",
     "VLO",
-    "VTRS",
-    "WBD"
+    "VTRS"
   ]
 }
