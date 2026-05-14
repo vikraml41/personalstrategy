@@ -177,3 +177,72 @@ def apply_overrides(scores_df, llm_scores: dict) -> dict:
             half_weight.append(ticker)
 
     return {"exits": exits, "boosts": boosts, "half_weight": half_weight}
+
+
+# ── Investment thesis generation ──────────────────────────────────────────────
+
+
+def generate_theses(
+    holdings: list[str],
+    scores_df,
+    fundamentals: dict,
+) -> dict[str, str]:
+    """
+    Generate a 2-sentence investment thesis for each holding using Claude.
+    Uses a plain-text prompt (not the JSON scoring prompt).
+    Returns {ticker: thesis_string}.
+    """
+    client = anthropic.Anthropic()
+    theses: dict[str, str] = {}
+
+    for ticker in holdings:
+        try:
+            row  = scores_df.loc[ticker] if ticker in scores_df.index else {}
+            fund = fundamentals.get(ticker, {})
+
+            m = float(row.get("momentum_score", 0)) if hasattr(row, "get") else 0.0
+            v = float(row.get("value_score",    0)) if hasattr(row, "get") else 0.0
+            q = float(row.get("quality_score",  0)) if hasattr(row, "get") else 0.0
+
+            sector = fund.get("sector", "Unknown")
+
+            # Build a short metrics string from whatever data is available
+            parts = []
+            ev_ebitda = fund.get("enterprise_to_ebitda")
+            pb        = fund.get("price_to_book")
+            roa       = fund.get("return_on_assets")
+            if ev_ebitda: parts.append(f"EV/EBITDA={ev_ebitda:.1f}x")
+            if pb:        parts.append(f"P/B={pb:.1f}x")
+            if roa:       parts.append(f"ROA={roa*100:.1f}%")
+            metrics = ", ".join(parts) if parts else "limited public data"
+
+            dominant = max({"momentum": m, "value": v, "quality": q}, key=lambda k: {"momentum": m, "value": v, "quality": q}[k])
+
+            prompt = (
+                f"Write exactly 2 sentences — a specific investment thesis for {ticker} "
+                f"({sector} sector). "
+                f"It ranked in the top decile of a momentum-value-quality factor model: "
+                f"momentum score={m:+.2f}, value score={v:+.2f}, quality score={q:+.2f}. "
+                f"Key metrics: {metrics}. "
+                f"The dominant factor driving selection is {dominant}. "
+                f"Be specific and avoid generic language. Do not use filler phrases like "
+                f"'this company' or 'this stock'. Focus on what makes it compelling RIGHT NOW."
+            )
+
+            response = client.messages.create(
+                model=LLM_MODEL,
+                max_tokens=130,
+                temperature=0.4,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            theses[ticker] = response.content[0].text.strip()
+            time.sleep(0.4)
+
+        except Exception as exc:
+            logger.warning("Thesis generation failed for %s: %s", ticker, exc)
+            theses[ticker] = (
+                f"Selected for {fund.get('sector', 'unknown')} sector exposure "
+                f"with favorable momentum and value factor characteristics."
+            )
+
+    return theses

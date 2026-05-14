@@ -16,10 +16,12 @@ import logging
 import sys
 from datetime import date
 
+from strategy.charts import generate_portfolio_chart
 from strategy.data import fetch_fundamentals, fetch_news_for_tickers, fetch_prices
-from strategy.llm import score_top_candidates
+from strategy.llm import generate_theses, score_top_candidates
 from strategy.portfolio import construct_portfolio
 from strategy.report import (
+    generate_html_report,
     load_current_portfolio,
     print_portfolio_summary,
     save_portfolio,
@@ -114,20 +116,34 @@ def main() -> None:
     buys  = sorted(new_holdings - prev_holdings)
     sells = sorted(portfolio["sells"])
 
+    trades = {
+        "date":            today.isoformat(),
+        "month":           month_str,
+        "buys":            buys,
+        "sells":           sells,
+        "holdings_after":  sorted(new_holdings),
+    }
+
     # ── 9. Persist ────────────────────────────────────────────────────
     logger.info("Step 9/9  Saving outputs...")
     save_rankings(scores_df, month_str)
     save_portfolio(portfolio)
-    save_trades(
-        {
-            "date":  today.isoformat(),
-            "month": month_str,
-            "buys":  buys,
-            "sells": sells,
-            "holdings_after": sorted(new_holdings),
-        },
-        month_str,
-    )
+    save_trades(trades, month_str)
+
+    # ── 10. Generate theses ───────────────────────────────────────────
+    logger.info("Step 10  Generating investment theses via LLM...")
+    theses = generate_theses(portfolio["holdings"], scores_df, fundamentals)
+
+    # ── 11. Generate chart ────────────────────────────────────────────
+    logger.info("Step 11  Generating charts...")
+    chart_b64 = generate_portfolio_chart(scores_df, portfolio, prices)
+
+    # ── 12. Write HTML report ─────────────────────────────────────────
+    html = generate_html_report(portfolio, trades, scores_df, theses, chart_b64)
+    html_path = "/tmp/monthly_report.html"
+    with open(html_path, "w", encoding="utf-8") as f:
+        f.write(html)
+    logger.info("HTML report written to %s", html_path)
 
     # ── Human-readable summary ─────────────────────────────────────────
     print_portfolio_summary(portfolio)

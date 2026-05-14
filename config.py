@@ -3,11 +3,11 @@ MOMENTUM_WEIGHT = 0.40
 VALUE_WEIGHT = 0.35
 QUALITY_WEIGHT = 0.25
 
-# Portfolio construction
-PORTFOLIO_TARGET = 20       # target number of stocks
-PORTFOLIO_MIN = 15          # if fewer qualify, hold remainder in cash ETF
-MAX_PER_SECTOR = 3          # hard sector cap (GICS level)
-SELL_RANK_THRESHOLD = 40    # sell any holding that falls out of top 40
+# Portfolio construction — concentrated, higher-conviction
+PORTFOLIO_TARGET = 10       # target number of stocks
+PORTFOLIO_MIN = 7           # if fewer qualify, hold remainder in cash ETF
+MAX_PER_SECTOR = 2          # hard sector cap (GICS level)
+SELL_RANK_THRESHOLD = 20    # sell any holding that falls out of top 20
 
 # Universe filters
 MARKET_CAP_FLOOR = 2_000_000_000   # $2B minimum
