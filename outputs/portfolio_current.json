@@ -4,33 +4,33 @@
     "VTRS",
     "VLO",
     "NEM",
-    "JBHT",
     "CF",
+    "JBHT",
     "HPE",
     "HST",
-    "AIZ",
-    "BEN"
+    "BEN",
+    "DELL"
   ],
   "weights": {
     "APA": 0.1,
     "VTRS": 0.1,
     "VLO": 0.1,
     "NEM": 0.1,
-    "JBHT": 0.1,
     "CF": 0.1,
+    "JBHT": 0.1,
     "HPE": 0.1,
     "HST": 0.1,
-    "AIZ": 0.1,
-    "BEN": 0.1
+    "BEN": 0.1,
+    "DELL": 0.1
   },
   "sector_counts": {
     "Energy": 2,
     "Healthcare": 1,
     "Basic Materials": 2,
     "Industrials": 1,
-    "Technology": 1,
+    "Technology": 2,
     "Real Estate": 1,
-    "Financial Services": 2
+    "Financial Services": 1
   },
   "llm_exits": [],
   "llm_boosts": [],
@@ -42,10 +42,5 @@
     "regime_triggered": false,
     "crash_triggered": false
   },
-  "sells": [
-    "WBD",
-    "BMY",
-    "EME",
-    "TSN"
-  ]
+  "sells": []
 }

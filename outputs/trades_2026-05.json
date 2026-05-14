@@ -1,18 +1,15 @@
 {
   "date": "2026-05-14",
   "month": "2026-05",
-  "buys": [],
-  "sells": [
-    "BMY",
-    "EME",
-    "TSN",
-    "WBD"
+  "buys": [
+    "DELL"
   ],
+  "sells": [],
   "holdings_after": [
-    "AIZ",
     "APA",
     "BEN",
     "CF",
+    "DELL",
     "HPE",
     "HST",
     "JBHT",
