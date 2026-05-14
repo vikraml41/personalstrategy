@@ -1,0 +1,45 @@
+name: Monthly Rebalance
+
+on:
+  schedule:
+    # 1st of every month at 14:30 UTC (US market open ~9:30 AM ET)
+    # If the 1st falls on a weekend the script still runs; the outputs are
+    # used as the reference for the first actual trading day.
+    - cron: '30 14 1 * *'
+  workflow_dispatch:   # allow manual trigger from the Actions tab
+
+permissions:
+  contents: write      # needed to commit outputs back to the repo
+
+jobs:
+  monthly-rebalance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120   # fundamental fetching for 300 stocks can take ~30 min
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run monthly rebalance
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python run_monthly.py
+
+      - name: Commit and push outputs
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name  "github-actions[bot]"
+          git add outputs/
+          git diff --staged --quiet || git commit -m "chore: monthly rebalance $(date +%Y-%m)"
+          git push
