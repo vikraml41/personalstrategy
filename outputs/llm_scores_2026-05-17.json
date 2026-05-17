@@ -1,0 +1,360 @@
+{
+  "date": "2026-05-17",
+  "scores": {
+    "APA": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "VTRS": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "VLO": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "NEM": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "CF": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "JBHT": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "HAL": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "HPE": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "HST": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "BEN": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "DELL": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "AIZ": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "BKR": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "DVN": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "PFG": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "NUE": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "SLB": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "DAL": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "BMY": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "BIIB": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "GL": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "COP": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "CTVA": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "ALL": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "TSN": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "MPC": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "HUM": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "ELV": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "WBD": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "EME": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "IVZ": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "HIG": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "MO": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "STT": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "TGT": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "L": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "FCX": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "DD": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "CVS": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "DVA": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "CINF": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "CBOE": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "ADM": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "TRV": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "PFE": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "GM": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "EOG": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "JBL": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "EG": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    },
+    "FDX": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "no news available",
+      "n_headlines": 0
+    }
+  },
+  "overrides": {
+    "exits": [],
+    "boosts": [],
+    "half_weight": []
+  }
+}
