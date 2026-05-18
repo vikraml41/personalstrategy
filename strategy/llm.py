@@ -45,6 +45,19 @@ SYSTEM_PROMPT = (
 # ── Core scoring ─────────────────────────────────────────────────────────────
 
 
+def _strip_code_fences(text: str) -> str:
+    """Remove markdown code block markers that models sometimes add."""
+    text = text.strip()
+    if text.startswith("```"):
+        lines = text.splitlines()
+        # drop first line (```json or ```) and last line (```)
+        inner = lines[1:] if lines[-1].strip() == "```" else lines[1:]
+        if inner and inner[-1].strip() == "```":
+            inner = inner[:-1]
+        text = "\n".join(inner).strip()
+    return text
+
+
 def _score_once(client: anthropic.Anthropic, text: str, temperature: float) -> Optional[dict]:
     """Call the LLM once and return parsed JSON, or None on failure."""
     try:
@@ -55,10 +68,10 @@ def _score_once(client: anthropic.Anthropic, text: str, temperature: float) -> O
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": text}],
         )
-        raw = response.content[0].text.strip()
+        raw = _strip_code_fences(response.content[0].text)
         return json.loads(raw)
-    except json.JSONDecodeError:
-        logger.warning("JSON parse failed for LLM output")
+    except json.JSONDecodeError as exc:
+        logger.warning("JSON parse failed — raw output was: %r (%s)", raw[:200], exc)
         return None
     except Exception as exc:
         logger.warning("LLM call error: %s", exc)
