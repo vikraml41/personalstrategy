@@ -21,6 +21,7 @@ from config import (
     LLM_HALF_WEIGHT_THRESHOLD,
     LLM_MODEL,
     LLM_RISK_EXCLUDE_THRESHOLD,
+    LLM_SCAN_MODEL,
     LLM_SENTIMENT_BOOST_THRESHOLD,
     LLM_STABILITY_RUNS,
     LLM_STABILITY_TEMPERATURE,
@@ -58,45 +59,52 @@ def _strip_code_fences(text: str) -> str:
     return text
 
 
-def _score_once(client: anthropic.Anthropic, text: str, temperature: float) -> Optional[dict]:
-    """Call the LLM once and return parsed JSON, or None on failure."""
+def _score_once(
+    client: anthropic.Anthropic, text: str, temperature: float
+) -> tuple[Optional[dict], str]:
+    """Call the LLM once. Returns (parsed_dict, "") on success or (None, error_type) on failure."""
+    raw = ""
     try:
         response = client.messages.create(
-            model=LLM_MODEL,
+            model=LLM_SCAN_MODEL,
             max_tokens=150,
             temperature=temperature,
             system=SYSTEM_PROMPT,
             messages=[{"role": "user", "content": text}],
         )
         raw = _strip_code_fences(response.content[0].text)
-        return json.loads(raw)
+        return json.loads(raw), ""
     except json.JSONDecodeError as exc:
-        logger.warning("JSON parse failed — raw output was: %r (%s)", raw[:200], exc)
-        return None
+        logger.warning("JSON parse failed — raw: %r (%s)", raw[:200], exc)
+        return None, "json-parse-error"
     except Exception as exc:
-        logger.warning("LLM call error: %s", exc)
-        return None
+        err_type = type(exc).__name__
+        logger.warning("LLM call error [%s]: %s", err_type, exc)
+        return None, err_type
 
 
 def score_text(client: anthropic.Anthropic, text: str) -> dict:
     """
     Score a single text item.
     Runs LLM_STABILITY_RUNS times and averages numeric fields for stability.
-    Falls back to neutral scores if all calls fail.
+    Falls back to neutral scores (with error type in rationale) if all calls fail.
     """
     n = LLM_STABILITY_RUNS
     temp = LLM_STABILITY_TEMPERATURE if n > 1 else LLM_TEMPERATURE
     results = []
+    last_err = ""
 
     for attempt in range(n):
-        parsed = _score_once(client, text, temp)
+        parsed, err = _score_once(client, text, temp)
         if parsed:
             results.append(parsed)
+        if err:
+            last_err = err
         if attempt < n - 1:
             time.sleep(0.5)
 
     if not results:
-        return {"sentiment": 50, "surprise": 0, "risk_flag": 0, "rationale": "scoring failed"}
+        return {"sentiment": 50, "surprise": 0, "risk_flag": 0, "rationale": f"err:{last_err}"}
 
     return {
         "sentiment":  sum(r.get("sentiment",  50) for r in results) / len(results),
