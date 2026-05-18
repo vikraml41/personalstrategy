@@ -1,0 +1,360 @@
+{
+  "date": "2026-05-18",
+  "scores": {
+    "APA": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "VTRS": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "VLO": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "NEM": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "CF": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "JBHT": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "HAL": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "HPE": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "HST": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "BEN": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "DELL": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "AIZ": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "BKR": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "DVN": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "PFG": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "NUE": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "SLB": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "DAL": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "BMY": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "BIIB": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "GL": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "COP": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "CTVA": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "ALL": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "TSN": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "MPC": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "HUM": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "ELV": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "WBD": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "EME": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "IVZ": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "HIG": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "MO": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "STT": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "TGT": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "L": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "FCX": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "DD": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "CVS": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "DVA": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "CINF": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "CBOE": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "ADM": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "TRV": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "PFE": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "GM": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "EOG": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "JBL": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "EG": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    },
+    "FDX": {
+      "sentiment": 50,
+      "surprise": 0,
+      "risk_flag": 0,
+      "rationale": "scoring failed",
+      "n_headlines": 10
+    }
+  },
+  "overrides": {
+    "exits": [],
+    "boosts": [],
+    "half_weight": []
+  }
+}
