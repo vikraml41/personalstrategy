@@ -79,7 +79,8 @@ def _score_once(
         return None, "json-parse-error"
     except Exception as exc:
         err_type = type(exc).__name__
-        logger.warning("LLM call error [%s]: %s", err_type, exc)
+        body = getattr(exc, "body", None) or getattr(exc, "message", None)
+        logger.warning("LLM call error [%s]: %s | body=%s", err_type, exc, body)
         return None, err_type
 
 
