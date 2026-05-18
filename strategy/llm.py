@@ -79,9 +79,17 @@ def _score_once(
         return None, "json-parse-error"
     except Exception as exc:
         err_type = type(exc).__name__
-        body = getattr(exc, "body", None) or getattr(exc, "message", None)
-        logger.warning("LLM call error [%s]: %s | body=%s", err_type, exc, body)
-        return None, err_type
+        # Extract the specific API error message so it shows up in the email Note column
+        detail = ""
+        body = getattr(exc, "body", None)
+        if isinstance(body, dict):
+            err_obj = body.get("error", {})
+            if isinstance(err_obj, dict):
+                detail = err_obj.get("message", "")
+        if not detail:
+            detail = str(exc)
+        logger.warning("LLM call error [%s]: %s", err_type, detail)
+        return None, detail[:80]
 
 
 def score_text(client: anthropic.Anthropic, text: str) -> dict:
@@ -105,7 +113,7 @@ def score_text(client: anthropic.Anthropic, text: str) -> dict:
             time.sleep(0.5)
 
     if not results:
-        return {"sentiment": 50, "surprise": 0, "risk_flag": 0, "rationale": f"err:{last_err}"}
+        return {"sentiment": 50, "surprise": 0, "risk_flag": 0, "rationale": last_err or "scoring failed"}
 
     return {
         "sentiment":  sum(r.get("sentiment",  50) for r in results) / len(results),
