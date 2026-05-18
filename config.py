@@ -35,8 +35,8 @@ FILING_LOOKBACK_DAYS = 90   # window for recent earnings/10-Q/10-K
 CASH_TICKERS = ["SGOV", "BIL"]
 
 # Anthropic model settings
-LLM_MODEL = "claude-3-5-sonnet-20241022"   # thesis generation (monthly)
-LLM_SCAN_MODEL = "claude-3-5-sonnet-20241022"   # news scoring (weekly + monthly)
+LLM_MODEL = "claude-sonnet-4-6"       # thesis generation (monthly)
+LLM_SCAN_MODEL = "claude-sonnet-4-6"  # news scoring (weekly + monthly)
 LLM_TEMPERATURE = 0.0
 LLM_STABILITY_RUNS = 3         # run each item N times and average
 LLM_STABILITY_TEMPERATURE = 0.2
