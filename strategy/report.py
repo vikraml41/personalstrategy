@@ -11,8 +11,6 @@ from typing import Optional
 
 import pandas as pd
 
-import pandas as pd
-
 logger = logging.getLogger(__name__)
 
 OUTPUTS = Path("outputs")

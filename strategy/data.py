@@ -6,6 +6,7 @@ import logging
 import time
 
 import pandas as pd
+import requests
 import yfinance as yf
 
 logger = logging.getLogger(__name__)
@@ -105,22 +106,59 @@ def fetch_fundamentals(tickers: list[str], delay: float = 0.4) -> dict:
 # ── News ─────────────────────────────────────────────────────────────────────
 
 
+def _fetch_news_rss(ticker: str) -> list[str]:
+    """
+    Fetch headlines via Yahoo Finance RSS feed.
+    More reliable than yfinance.news which breaks across API versions.
+    """
+    import xml.etree.ElementTree as ET
+    url = (
+        f"https://feeds.finance.yahoo.com/rss/2.0/headline"
+        f"?s={ticker}&region=US&lang=en-US"
+    )
+    try:
+        resp = requests.get(
+            url, timeout=12,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; research-bot/1.0)"},
+        )
+        if resp.status_code != 200:
+            return []
+        root = ET.fromstring(resp.text)
+        titles = []
+        for item in root.findall(".//item")[:10]:
+            title_el = item.find("title")
+            if title_el is not None and title_el.text:
+                titles.append(title_el.text.strip())
+        return titles
+    except Exception:
+        return []
+
+
 def fetch_news_for_tickers(tickers: list[str]) -> dict:
     """
-    Fetch the most recent news headlines for each ticker via yfinance.
+    Fetch the most recent news headlines for each ticker.
+    Tries Yahoo Finance RSS first; falls back to yfinance.news.
     Returns {ticker: [headline, ...]}.
     """
     news_data: dict = {}
     for ticker in tickers:
         try:
-            items = yf.Ticker(ticker).news or []
-            headlines = [
-                item.get("title", "")
-                for item in items[:10]
-                if item.get("title")
-            ]
+            headlines: list[str] = _fetch_news_rss(ticker)
+
+            # Fallback: yfinance.news
+            if not headlines:
+                try:
+                    items = yf.Ticker(ticker).news or []
+                    headlines = [
+                        item.get("title", "")
+                        for item in items[:10]
+                        if item.get("title")
+                    ]
+                except Exception as exc:
+                    logger.debug("yfinance news fallback failed for %s: %s", ticker, exc)
+
             news_data[ticker] = headlines
-            time.sleep(0.2)
+            time.sleep(0.3)
         except Exception as exc:
             logger.warning("News fetch failed for %s: %s", ticker, exc)
             news_data[ticker] = []
