@@ -1,0 +1,25 @@
+{
+  "date": "2026-06-01",
+  "month": "2026-06",
+  "buys": [
+    "CNC",
+    "DAL",
+    "PFG"
+  ],
+  "sells": [
+    "DELL",
+    "HPE"
+  ],
+  "holdings_after": [
+    "APA",
+    "CF",
+    "CNC",
+    "DAL",
+    "HST",
+    "JBHT",
+    "NEM",
+    "PFG",
+    "VLO",
+    "VTRS"
+  ]
+}

@@ -1,0 +1,802 @@
+[
+  {
+    "ticker": "APA",
+    "composite": 0.6770529000906029,
+    "momentum_score": 0.1868533656019196,
+    "value_score": 1.3213744252432524,
+    "quality_score": 0.5593220200587872,
+    "decile": 1
+  },
+  {
+    "ticker": "VLO",
+    "composite": 0.6762190778338724,
+    "momentum_score": 0.6281717970203835,
+    "value_score": 1.0771627210624175,
+    "quality_score": 0.1917736266154914,
+    "decile": 1
+  },
+  {
+    "ticker": "CNC",
+    "composite": 0.5153933892596305,
+    "momentum_score": 0.03600932277570287,
+    "value_score": 1.618221397284724,
+    "quality_score": -0.2615513156012163,
+    "decile": 1
+  },
+  {
+    "ticker": "VTRS",
+    "composite": 0.5104102272156255,
+    "momentum_score": 0.3455495623419941,
+    "value_score": 1.4657986772235152,
+    "quality_score": -0.5633565389976101,
+    "decile": 1
+  },
+  {
+    "ticker": "HST",
+    "composite": 0.510022256389287,
+    "momentum_score": 0.46969590413028717,
+    "value_score": 0.8322429855801559,
+    "quality_score": 0.12343539913647045,
+    "decile": 1
+  },
+  {
+    "ticker": "PFG",
+    "composite": 0.4939792248742251,
+    "momentum_score": 0.2621806668334308,
+    "value_score": 1.2272635854638931,
+    "quality_score": -0.16174118708603924,
+    "decile": 1
+  },
+  {
+    "ticker": "JBHT",
+    "composite": 0.49351043575467596,
+    "momentum_score": 0.7651432011715601,
+    "value_score": 0.07052554833933006,
+    "quality_score": 0.6510768534691456,
+    "decile": 1
+  },
+  {
+    "ticker": "HAL",
+    "composite": 0.4671435937122374,
+    "momentum_score": 0.403182309716704,
+    "value_score": 0.9658640806867855,
+    "quality_score": -0.12872703365927643,
+    "decile": 1
+  },
+  {
+    "ticker": "DAL",
+    "composite": 0.464063958431996,
+    "momentum_score": 0.3918790014764064,
+    "value_score": 1.0427498996975764,
+    "quality_score": -0.23060042821087331,
+    "decile": 1
+  },
+  {
+    "ticker": "CF",
+    "composite": 0.44575667126992513,
+    "momentum_score": -0.16479094809956393,
+    "value_score": 0.8638036154217905,
+    "quality_score": 0.8373671404484961,
+    "decile": 1
+  },
+  {
+    "ticker": "MPC",
+    "composite": 0.4446001329030436,
+    "momentum_score": 0.5244508956802851,
+    "value_score": 0.7171458542856151,
+    "quality_score": -0.06472509747614284,
+    "decile": 1
+  },
+  {
+    "ticker": "NEM",
+    "composite": 0.4382441595387553,
+    "momentum_score": -0.16769597963903524,
+    "value_score": 0.6668653459667422,
+    "quality_score": 1.0876787212240386,
+    "decile": 1
+  },
+  {
+    "ticker": "HUM",
+    "composite": 0.429834060367747,
+    "momentum_score": -0.030275575260284182,
+    "value_score": 1.2865246285834369,
+    "quality_score": -0.03335731812936871,
+    "decile": 1
+  },
+  {
+    "ticker": "DVN",
+    "composite": 0.4296815943973955,
+    "momentum_score": 0.019756794029114483,
+    "value_score": 0.9828410923807688,
+    "quality_score": 0.3111379778099225,
+    "decile": 1
+  },
+  {
+    "ticker": "BEN",
+    "composite": 0.42902809332516617,
+    "momentum_score": 0.3918013705959379,
+    "value_score": 0.5683713641727092,
+    "quality_score": 0.29351027050537115,
+    "decile": 1
+  },
+  {
+    "ticker": "NUE",
+    "composite": 0.42162948019841007,
+    "momentum_score": 0.7968446741452931,
+    "value_score": 0.21619710857916238,
+    "quality_score": 0.10889049015034369,
+    "decile": 1
+  },
+  {
+    "ticker": "HPQ",
+    "composite": 0.41419109140543836,
+    "momentum_score": -0.15708146715521584,
+    "value_score": 1.6137793359130133,
+    "quality_score": -0.35119635720811965,
+    "decile": 1
+  },
+  {
+    "ticker": "SLB",
+    "composite": 0.3986393440197579,
+    "momentum_score": 0.48397348226290626,
+    "value_score": 0.5337183169486422,
+    "quality_score": 0.07299416073028264,
+    "decile": 1
+  },
+  {
+    "ticker": "GM",
+    "composite": 0.38366499259866305,
+    "momentum_score": 0.18720585176188456,
+    "value_score": 1.5283642132207698,
+    "quality_score": -0.9045792909334409,
+    "decile": 1
+  },
+  {
+    "ticker": "BKR",
+    "composite": 0.3813770174530972,
+    "momentum_score": 0.17835228043777032,
+    "value_score": 0.5959515452874583,
+    "quality_score": 0.40581225770951496,
+    "decile": 1
+  },
+  {
+    "ticker": "TGT",
+    "composite": 0.37949239262304585,
+    "momentum_score": 0.282241032330233,
+    "value_score": 0.9801524728567554,
+    "quality_score": -0.3058295432356471,
+    "decile": 1
+  },
+  {
+    "ticker": "COP",
+    "composite": 0.37450674646972026,
+    "momentum_score": -0.06385758291228152,
+    "value_score": 0.8811789957402272,
+    "quality_score": 0.36654852450221365,
+    "decile": 1
+  },
+  {
+    "ticker": "HPE",
+    "composite": 0.36435492397626634,
+    "momentum_score": 0.811254434587899,
+    "value_score": 0.569788831346262,
+    "quality_score": -0.63829176332034,
+    "decile": 1
+  },
+  {
+    "ticker": "IVZ",
+    "composite": 0.3511131620856872,
+    "momentum_score": 0.19579086220221611,
+    "value_score": 1.0607092111669236,
+    "quality_score": -0.3938056268144901,
+    "decile": 1
+  },
+  {
+    "ticker": "ELV",
+    "composite": 0.34580422231858665,
+    "momentum_score": -0.22772601063231426,
+    "value_score": 1.2872383882723346,
+    "quality_score": -0.05455523729521883,
+    "decile": 1
+  },
+  {
+    "ticker": "DVA",
+    "composite": 0.34058439878420976,
+    "momentum_score": 0.014267745131568615,
+    "value_score": 1.1216562706460873,
+    "quality_score": -0.23080957597819268,
+    "decile": 1
+  },
+  {
+    "ticker": "ADM",
+    "composite": 0.33863278872330616,
+    "momentum_score": 0.6268095009225436,
+    "value_score": 0.7296352120167348,
+    "quality_score": -0.6698533434062738,
+    "decile": 1
+  },
+  {
+    "ticker": "GL",
+    "composite": 0.33270350522375697,
+    "momentum_score": -0.020269521028785348,
+    "value_score": 1.1641126447923802,
+    "quality_score": -0.26651244816824765,
+    "decile": 1
+  },
+  {
+    "ticker": "STT",
+    "composite": 0.3291781640748493,
+    "momentum_score": 0.6268095009225436,
+    "value_score": 0.6945000673535511,
+    "quality_score": -0.6584826394716441,
+    "decile": 1
+  },
+  {
+    "ticker": "AIZ",
+    "composite": 0.3276319693693001,
+    "momentum_score": -0.29696419724157724,
+    "value_score": 1.3436682815264853,
+    "quality_score": -0.09546500107335532,
+    "decile": 1
+  },
+  {
+    "ticker": "EOG",
+    "composite": 0.32739563081283496,
+    "momentum_score": -0.00605908311711198,
+    "value_score": 0.8389559773923627,
+    "quality_score": 0.14473868788941124,
+    "decile": 2
+  },
+  {
+    "ticker": "BIIB",
+    "composite": 0.3252763263729277,
+    "momentum_score": -0.138544953912904,
+    "value_score": 1.1328473408417983,
+    "quality_score": -0.06320904542616046,
+    "decile": 2
+  },
+  {
+    "ticker": "EXPD",
+    "composite": 0.3025796892377072,
+    "momentum_score": -0.03180152564667901,
+    "value_score": 0.17366346107897634,
+    "quality_score": 1.0180723524749482,
+    "decile": 2
+  },
+  {
+    "ticker": "TROW",
+    "composite": 0.29908221819912983,
+    "momentum_score": -0.34881415725210385,
+    "value_score": 1.082022340165524,
+    "quality_score": 0.23960024816815206,
+    "decile": 2
+  },
+  {
+    "ticker": "FCX",
+    "composite": 0.2938282020338181,
+    "momentum_score": 0.4378937208251358,
+    "value_score": -0.020179151890246376,
+    "quality_score": 0.5029336674613999,
+    "decile": 2
+  },
+  {
+    "ticker": "WBD",
+    "composite": 0.29100520819018927,
+    "momentum_score": 0.06595824711734902,
+    "value_score": 1.0694164003387625,
+    "quality_score": -0.4386953231012688,
+    "decile": 2
+  },
+  {
+    "ticker": "OXY",
+    "composite": 0.28827759155088456,
+    "momentum_score": 0.048586805573848896,
+    "value_score": 0.9691666606485667,
+    "quality_score": -0.28146184762261334,
+    "decile": 2
+  },
+  {
+    "ticker": "L",
+    "composite": 0.2660923641516852,
+    "momentum_score": -0.6487323007254295,
+    "value_score": 1.492175698148844,
+    "quality_score": 0.013295160359046349,
+    "decile": 2
+  },
+  {
+    "ticker": "PSX",
+    "composite": 0.26439014049344023,
+    "momentum_score": 0.4869435558914187,
+    "value_score": 0.31311247035902834,
+    "quality_score": -0.15990658595514878,
+    "decile": 2
+  },
+  {
+    "ticker": "BMY",
+    "composite": 0.26067287685413476,
+    "momentum_score": -0.4384651955181341,
+    "value_score": 0.772551243521556,
+    "quality_score": 0.6626640793153753,
+    "decile": 2
+  },
+  {
+    "ticker": "FSLR",
+    "composite": 0.2604072367040247,
+    "momentum_score": -0.005855564322370305,
+    "value_score": 0.12231435795057116,
+    "quality_score": 0.8797577486010918,
+    "decile": 2
+  },
+  {
+    "ticker": "MO",
+    "composite": 0.2568478447719425,
+    "momentum_score": -0.08097095423152162,
+    "value_score": 0.7040534448909302,
+    "quality_score": 0.17127008301090244,
+    "decile": 2
+  },
+  {
+    "ticker": "C",
+    "composite": 0.25572142239717155,
+    "momentum_score": 0.4437184708274101,
+    "value_score": 1.0245366160479525,
+    "quality_score": -1.1214151262023035,
+    "decile": 2
+  },
+  {
+    "ticker": "JBL",
+    "composite": 0.2356543677149601,
+    "momentum_score": 0.5992662527270852,
+    "value_score": 0.004614179949370523,
+    "quality_score": -0.022668385432614777,
+    "decile": 2
+  },
+  {
+    "ticker": "DELL",
+    "composite": 0.23392020910417652,
+    "momentum_score": 0.8833032368009283,
+    "value_score": -0.38020868593690343,
+    "quality_score": 0.054687817846885624,
+    "decile": 2
+  },
+  {
+    "ticker": "UAL",
+    "composite": 0.23044218315356899,
+    "momentum_score": -0.33734929285515564,
+    "value_score": 1.0611041374283516,
+    "quality_score": -0.024018191217167195,
+    "decile": 2
+  },
+  {
+    "ticker": "MU",
+    "composite": 0.21798663560207726,
+    "momentum_score": 0.9755257036336059,
+    "value_score": -1.273974522559456,
+    "quality_score": 1.0946697481777778,
+    "decile": 2
+  },
+  {
+    "ticker": "WDC",
+    "composite": 0.21775316158976832,
+    "momentum_score": 0.981289607810648,
+    "value_score": -1.2900022398516333,
+    "quality_score": 1.1069524096543228,
+    "decile": 2
+  },
+  {
+    "ticker": "ROST",
+    "composite": 0.20934233421680024,
+    "momentum_score": 0.36007681817125503,
+    "value_score": -0.3368264955464415,
+    "quality_score": 0.7328035215582109,
+    "decile": 2
+  },
+  {
+    "ticker": "DECK",
+    "composite": 0.20692060989359035,
+    "momentum_score": -0.5853943968670048,
+    "value_score": 0.5997977703153092,
+    "quality_score": 0.9245965961201362,
+    "decile": 2
+  },
+  {
+    "ticker": "ALL",
+    "composite": 0.20453092121019817,
+    "momentum_score": -0.8879133427536414,
+    "value_score": 1.508143595165022,
+    "quality_score": 0.1273840000155884,
+    "decile": 2
+  },
+  {
+    "ticker": "CVX",
+    "composite": 0.2010155540488858,
+    "momentum_score": -0.08397669610241149,
+    "value_score": 0.7790951360132241,
+    "quality_score": -0.15230826045911205,
+    "decile": 2
+  },
+  {
+    "ticker": "PFE",
+    "composite": 0.1960359031913603,
+    "momentum_score": -0.6314531769857297,
+    "value_score": 1.1939305604411892,
+    "quality_score": 0.12296591132494404,
+    "decile": 2
+  },
+  {
+    "ticker": "FOX",
+    "composite": 0.1946330846962175,
+    "momentum_score": -0.8592364948379394,
+    "value_score": 1.1071572027274188,
+    "quality_score": 0.6032906467071869,
+    "decile": 2
+  },
+  {
+    "ticker": "STLD",
+    "composite": 0.19413344147095268,
+    "momentum_score": 0.7593792969945178,
+    "value_score": -0.17116189881673602,
+    "quality_score": -0.19884645096398743,
+    "decile": 2
+  },
+  {
+    "ticker": "SWK",
+    "composite": 0.19259063525391013,
+    "momentum_score": -0.6114578535779686,
+    "value_score": 1.2466278848212078,
+    "quality_score": 0.0034160679906993785,
+    "decile": 2
+  },
+  {
+    "ticker": "CFG",
+    "composite": 0.18784101515908752,
+    "momentum_score": -0.10700084083201244,
+    "value_score": 0.8928753189729836,
+    "quality_score": -0.3274600405946069,
+    "decile": 2
+  },
+  {
+    "ticker": "CTVA",
+    "composite": 0.18483661495876924,
+    "momentum_score": -0.4498880972769911,
+    "value_score": 0.6975014588597949,
+    "quality_score": 0.48266537307455004,
+    "decile": 2
+  },
+  {
+    "ticker": "KEY",
+    "composite": 0.1845224861140633,
+    "momentum_score": -0.10983033962291988,
+    "value_score": 0.8728581094508415,
+    "quality_score": -0.30818286537825307,
+    "decile": 2
+  },
+  {
+    "ticker": "EME",
+    "composite": 0.18434532579876767,
+    "momentum_score": 0.117726379983598,
+    "value_score": -0.15347309546384794,
+    "quality_score": 0.763881428870701,
+    "decile": 2
+  },
+  {
+    "ticker": "DD",
+    "composite": 0.18128479332092873,
+    "momentum_score": 0.16401175834801465,
+    "value_score": 0.24565598623838958,
+    "quality_score": 0.11880197919314608,
+    "decile": 3
+  },
+  {
+    "ticker": "VZ",
+    "composite": 0.17554418349342849,
+    "momentum_score": -0.21924171052340136,
+    "value_score": 1.2279032162221322,
+    "quality_score": -0.6661010318998288,
+    "decile": 3
+  },
+  {
+    "ticker": "TRV",
+    "composite": 0.16999804583386596,
+    "momentum_score": -0.7495586611855796,
+    "value_score": 1.419344168188061,
+    "quality_score": -0.10779579423089397,
+    "decile": 3
+  },
+  {
+    "ticker": "CVS",
+    "composite": 0.16639770451831953,
+    "momentum_score": -0.1299494528130497,
+    "value_score": 1.0581659354714885,
+    "quality_score": -0.6079223670859262,
+    "decile": 3
+  },
+  {
+    "ticker": "FFIV",
+    "composite": 0.16306517084886765,
+    "momentum_score": 0.18150698967388348,
+    "value_score": -0.37526793081597215,
+    "quality_score": 0.887224603059618,
+    "decile": 3
+  },
+  {
+    "ticker": "FANG",
+    "composite": 0.162173053030706,
+    "momentum_score": 0.293731074310036,
+    "value_score": 0.6065297408940401,
+    "quality_score": -0.6704191440248897,
+    "decile": 3
+  },
+  {
+    "ticker": "TXT",
+    "composite": 0.1616792437698345,
+    "momentum_score": -0.49895261926660595,
+    "value_score": 0.9565657347874235,
+    "quality_score": 0.10584913720351471,
+    "decile": 3
+  },
+  {
+    "ticker": "UPS",
+    "composite": 0.1613642944656715,
+    "momentum_score": -0.2624646974555054,
+    "value_score": 0.7608295051922267,
+    "quality_score": 0.00023938652237730923,
+    "decile": 3
+  },
+  {
+    "ticker": "SNA",
+    "composite": 0.15270703880663955,
+    "momentum_score": -0.30856124394851225,
+    "value_score": 0.44251168623465,
+    "quality_score": 0.485009784815668,
+    "decile": 3
+  },
+  {
+    "ticker": "XOM",
+    "composite": 0.15039790471353948,
+    "momentum_score": -0.04944572433777117,
+    "value_score": 0.4779792828992674,
+    "quality_score": 0.011533781735617532,
+    "decile": 3
+  },
+  {
+    "ticker": "CINF",
+    "composite": 0.14885610482196165,
+    "momentum_score": -0.957107468592909,
+    "value_score": 1.3754549195757302,
+    "quality_score": 0.20115948163047898,
+    "decile": 3
+  },
+  {
+    "ticker": "LRCX",
+    "composite": 0.14331580143951778,
+    "momentum_score": 0.8414593310219006,
+    "value_score": -1.350967957141617,
+    "quality_score": 1.1182834161212938,
+    "decile": 3
+  },
+  {
+    "ticker": "INCY",
+    "composite": 0.143235800738187,
+    "momentum_score": -0.7123135878847825,
+    "value_score": 0.462393203846803,
+    "quality_score": 1.0652944581828758,
+    "decile": 3
+  },
+  {
+    "ticker": "GD",
+    "composite": 0.14163143238618975,
+    "momentum_score": -0.4872968248663435,
+    "value_score": 0.6038918153560642,
+    "quality_score": 0.5007521078324189,
+    "decile": 3
+  },
+  {
+    "ticker": "FOXA",
+    "composite": 0.14059543126909793,
+    "momentum_score": -0.8852034374812937,
+    "value_score": 0.982440413099482,
+    "quality_score": 0.6032906467071869,
+    "decile": 3
+  },
+  {
+    "ticker": "TPR",
+    "composite": 0.13158918215581067,
+    "momentum_score": -0.0004588332286248886,
+    "value_score": -0.13868451469497214,
+    "quality_score": 0.7212491823620034,
+    "decile": 3
+  },
+  {
+    "ticker": "EIX",
+    "composite": 0.12551343541313503,
+    "momentum_score": -0.09252394016846097,
+    "value_score": 0.65308586882155,
+    "quality_score": -0.2642281704280922,
+    "decile": 3
+  },
+  {
+    "ticker": "STX",
+    "composite": 0.1062873047126251,
+    "momentum_score": 0.9697617994565634,
+    "value_score": -1.440269065610538,
+    "quality_score": 0.8899070315747517,
+    "decile": 3
+  },
+  {
+    "ticker": "NTAP",
+    "composite": 0.10387283178894527,
+    "momentum_score": 0.24350987314922748,
+    "value_score": -0.3350083055398134,
+    "quality_score": 0.49488715787275583,
+    "decile": 3
+  },
+  {
+    "ticker": "BG",
+    "composite": 0.10328415481049927,
+    "momentum_score": 0.6325734050995862,
+    "value_score": 0.28299586568630297,
+    "quality_score": -0.9951750408781649,
+    "decile": 3
+  },
+  {
+    "ticker": "SNDK",
+    "composite": 0.10277559105370929,
+    "momentum_score": 0.9956993682532541,
+    "value_score": -1.319991315151249,
+    "quality_score": 0.665971216221379,
+    "decile": 3
+  },
+  {
+    "ticker": "PHM",
+    "composite": 0.09641440332574787,
+    "momentum_score": -1.0553288303759387,
+    "value_score": 1.3379013797119996,
+    "quality_score": 0.20112181030769422,
+    "decile": 3
+  },
+  {
+    "ticker": "BBY",
+    "composite": 0.09421194923436248,
+    "momentum_score": -0.9570864872738634,
+    "value_score": 1.0374818677301139,
+    "quality_score": 0.4557115617534721,
+    "decile": 3
+  },
+  {
+    "ticker": "SWKS",
+    "composite": 0.0940213210734164,
+    "momentum_score": -0.7237490784350668,
+    "value_score": 0.8594408834008547,
+    "quality_score": 0.33086657302857614,
+    "decile": 3
+  },
+  {
+    "ticker": "RL",
+    "composite": 0.09388296183666636,
+    "momentum_score": -0.3143188537298409,
+    "value_score": 0.05102414910151422,
+    "quality_score": 0.807008204572291,
+    "decile": 3
+  },
+  {
+    "ticker": "ON",
+    "composite": 0.08991369630679437,
+    "momentum_score": 0.6972589181325188,
+    "value_score": -0.5605675653815678,
+    "quality_score": 0.028835107749342337,
+    "decile": 3
+  },
+  {
+    "ticker": "KLAC",
+    "composite": 0.08661474525183849,
+    "momentum_score": 0.7117274262684521,
+    "value_score": -1.3314912842581235,
+    "quality_score": 1.0717828969392034,
+    "decile": 3
+  },
+  {
+    "ticker": "MAS",
+    "composite": 0.08524113127398353,
+    "momentum_score": -0.7006787748035654,
+    "value_score": 0.8837359597112173,
+    "quality_score": 0.22482022118593473,
+    "decile": 3
+  },
+  {
+    "ticker": "AMAT",
+    "composite": 0.0828127842754956,
+    "momentum_score": 0.8977129972435341,
+    "value_score": -1.1853589316152278,
+    "quality_score": 0.5544128457736464,
+    "decile": 3
+  },
+  {
+    "ticker": "IEX",
+    "composite": 0.0723540827817296,
+    "momentum_score": -0.06355335378612134,
+    "value_score": -0.052857028749068016,
+    "quality_score": 0.46510153743340776,
+    "decile": 3
+  },
+  {
+    "ticker": "CSCO",
+    "composite": 0.06959155183599713,
+    "momentum_score": 0.6613929259847978,
+    "value_score": -0.8569089117042819,
+    "quality_score": 0.4198100021543065,
+    "decile": 4
+  },
+  {
+    "ticker": "MRK",
+    "composite": 0.06508621785715912,
+    "momentum_score": -0.031944198616188774,
+    "value_score": 0.2621354136332906,
+    "quality_score": -0.055533989872068285,
+    "decile": 4
+  },
+  {
+    "ticker": "UNH",
+    "composite": 0.06144234661930796,
+    "momentum_score": -0.12700875303120102,
+    "value_score": 0.5384267552392283,
+    "quality_score": -0.3048140660077661,
+    "decile": 4
+  },
+  {
+    "ticker": "CB",
+    "composite": 0.05693632769983156,
+    "momentum_score": -0.7870974729530141,
+    "value_score": 1.1994034137376162,
+    "quality_score": -0.19206351170851355,
+    "decile": 4
+  },
+  {
+    "ticker": "NDSN",
+    "composite": 0.04819264642261723,
+    "momentum_score": 0.05167437458901644,
+    "value_score": -0.23362285297566468,
+    "quality_score": 0.43716358051397314,
+    "decile": 4
+  },
+  {
+    "ticker": "RF",
+    "composite": 0.04643411157750395,
+    "momentum_score": -0.43559583222104026,
+    "value_score": 0.8258383770374974,
+    "quality_score": -0.27348394998881614,
+    "decile": 4
+  },
+  {
+    "ticker": "CHRW",
+    "composite": 0.04323896367390201,
+    "momentum_score": -0.02340534707775746,
+    "value_score": -0.13840054074971841,
+    "quality_score": 0.40416516706962574,
+    "decile": 4
+  },
+  {
+    "ticker": "ODFL",
+    "composite": 0.043164245839756865,
+    "momentum_score": 0.5028855611161333,
+    "value_score": -0.8582515915275248,
+    "quality_score": 0.5695923137117489,
+    "decile": 4
+  },
+  {
+    "ticker": "HII",
+    "composite": 0.04203988172538416,
+    "momentum_score": -0.8046724332912559,
+    "value_score": 0.8913574801477704,
+    "quality_score": 0.20773494796066766,
+    "decile": 4
+  },
+  {
+    "ticker": "CAH",
+    "composite": 0.038371037629483476,
+    "momentum_score": -0.9428928344174264,
+    "value_score": 1.31012549439936,
+    "quality_score": -0.1720630065732877,
+    "decile": 4
+  }
+]
