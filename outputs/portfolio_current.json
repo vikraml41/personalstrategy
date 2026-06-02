@@ -1,5 +1,16 @@
 {
-  "holdings": ["CNC", "PFG", "DAL", "JBHT", "HST", "APA", "BEN", "CF", "NEM", "VTRS"],
+  "holdings": [
+    "CNC",
+    "PFG",
+    "DAL",
+    "JBHT",
+    "HST",
+    "APA",
+    "BEN",
+    "CF",
+    "NEM",
+    "VTRS"
+  ],
   "shares": {
     "CNC": 7.246,
     "PFG": 4.271,
@@ -21,7 +32,7 @@
     "APA": 37.17,
     "BEN": 32.32,
     "CF": 123.12,
-    "NEM": 116.70,
+    "NEM": 116.7,
     "VTRS": 17.21
   },
   "peak_prices": {
@@ -29,12 +40,12 @@
     "PFG": 103.57,
     "DAL": 80.57,
     "JBHT": 278.11,
-    "HST": 23.39,
+    "HST": 23.649999618530273,
     "APA": 38.04,
-    "BEN": 31.02,
+    "BEN": 31.1200008392334,
     "CF": 114.45,
-    "NEM": 107.58,
-    "VTRS": 15.70
+    "NEM": 109.5,
+    "VTRS": 15.7
   },
   "entry_dates": {
     "CNC": "2026-05-01",
@@ -53,8 +64,16 @@
   "last_rebalance_date": "2026-05-01",
   "exits_since_rebalance": 0,
   "weights": {
-    "CNC": 0.1, "PFG": 0.1, "DAL": 0.1, "JBHT": 0.1, "HST": 0.1,
-    "APA": 0.1, "BEN": 0.1, "CF": 0.1, "NEM": 0.1, "VTRS": 0.1
+    "CNC": 0.1,
+    "PFG": 0.1,
+    "DAL": 0.1,
+    "JBHT": 0.1,
+    "HST": 0.1,
+    "APA": 0.1,
+    "BEN": 0.1,
+    "CF": 0.1,
+    "NEM": 0.1,
+    "VTRS": 0.1
   },
   "regime": {
     "equity_fraction": 1.0,
