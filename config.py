@@ -1,42 +1,46 @@
 # Signal weights (must sum to 1.0)
 MOMENTUM_WEIGHT = 0.40
-VALUE_WEIGHT = 0.35
-QUALITY_WEIGHT = 0.25
+VALUE_WEIGHT    = 0.35
+QUALITY_WEIGHT  = 0.25
 
-# Portfolio construction — concentrated, higher-conviction
-PORTFOLIO_TARGET = 10       # target number of stocks
-PORTFOLIO_MIN = 7           # if fewer qualify, hold remainder in cash ETF
-MAX_PER_SECTOR = 2          # hard sector cap (GICS level)
-SELL_RANK_THRESHOLD = 20    # sell any holding that falls out of top 20
+# Portfolio construction
+PORTFOLIO_TARGET    = 10   # target number of stocks
+PORTFOLIO_MIN       = 7    # hold cash ETF if fewer qualify
+MAX_PER_SECTOR      = 2    # hard GICS sector cap
+SELL_RANK_THRESHOLD = 20   # sell any holding that drops below this composite rank
 
 # Universe filters
-MARKET_CAP_FLOOR = 2_000_000_000   # $2B minimum
-MIN_HISTORY_DAYS = 252              # 1 year of price history required
+MARKET_CAP_FLOOR = 2_000_000_000  # $2B minimum
+MIN_HISTORY_DAYS = 252             # 1 year of price history required
 
-# Risk overlay thresholds
-SPY_LOOKBACK_MONTHS = 10    # months for SPY trend signal
-SPY_MA_DAYS = 200           # moving average window for regime filter
-CRASH_LOOKBACK_MONTHS = 24  # months for momentum-crash detection
-VOL_WINDOW_DAYS = 63        # ~3 months rolling vol window
-VOL_PERCENTILE = 80         # top 20th percentile triggers crash filter
+# Risk overlay
+SPY_LOOKBACK_MONTHS  = 10
+SPY_MA_DAYS          = 200
+CRASH_LOOKBACK_MONTHS= 24
+VOL_WINDOW_DAYS      = 63
+VOL_PERCENTILE       = 80
 
-# LLM override thresholds (0-100 scale)
-LLM_RISK_EXCLUDE_THRESHOLD = 70     # risk_flag > this in top decile → exclude
-LLM_SENTIMENT_BOOST_THRESHOLD = 80  # sentiment > this to qualify for boost
-LLM_SURPRISE_BOOST_THRESHOLD = 60   # surprise > this to qualify for boost
-LLM_HALF_WEIGHT_THRESHOLD = 30      # sentiment < this → half weight
+# ── Portfolio management ──────────────────────────────────────────────────────
+PORTFOLIO_SIZE         = 4427.43   # total account value in dollars
+HARD_STOP_PCT          = 0.12      # -12% from entry price → immediate exit
+TRAILING_STOP_PCT      = 0.15      # -15% from peak price → exit (protects gains)
 
-# LLM scan parameters
-LLM_SCAN_TOP_N = 50         # score top N stocks weekly
-NEWS_LOOKBACK_DAYS = 7      # days of headlines to fetch
-FILING_LOOKBACK_DAYS = 90   # window for recent earnings/10-Q/10-K
+# Exit / profit-taking signals (rules-based, no LLM)
+RSI_CROWD_THRESHOLD    = 73        # RSI above this = overbought/crowded
+REL_VOL_CROWD          = 2.5       # daily volume > 2.5× 20d avg = distribution signal
+MA50_EXTEND_THRESHOLD  = 0.12      # >12% above 50d MA = extended, tighten stops
+MACD_FAST              = 12
+MACD_SLOW              = 26
+MACD_SIGNAL            = 9
+RSI_PERIOD             = 14
 
-# Cash fallback tickers (held when equity exposure is reduced)
+# Entry quality filter (applied at stock selection)
+ENTRY_MAX_EXTENSION    = 0.10      # skip stocks >10% above 50d MA at buy time
+ENTRY_RSI_MAX          = 70        # skip stocks with RSI >70 at buy time
+
+# Dynamic rebalance triggers
+REBALANCE_MAX_WEEKS    = 6         # force rebalance after 6 weeks regardless
+REBALANCE_EXIT_TRIGGER = 3         # trigger rebalance after 3+ exits since last rebalance
+
+# Cash fallback
 CASH_TICKERS = ["SGOV", "BIL"]
-
-# Anthropic model settings
-LLM_MODEL = "claude-sonnet-4-6"       # thesis generation (monthly)
-LLM_SCAN_MODEL = "claude-sonnet-4-6"  # news scoring (weekly + monthly)
-LLM_TEMPERATURE = 0.0
-LLM_STABILITY_RUNS = 3         # run each item N times and average
-LLM_STABILITY_TEMPERATURE = 0.2
