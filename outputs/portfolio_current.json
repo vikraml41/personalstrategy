@@ -1,48 +1,68 @@
 {
-  "holdings": [
-    "APA",
-    "VLO",
-    "CNC",
-    "VTRS",
-    "HST",
-    "PFG",
-    "JBHT",
-    "DAL",
-    "CF",
-    "NEM"
-  ],
-  "weights": {
-    "APA": 0.1,
-    "VLO": 0.1,
-    "CNC": 0.1,
-    "VTRS": 0.1,
-    "HST": 0.1,
-    "PFG": 0.1,
-    "JBHT": 0.1,
-    "DAL": 0.1,
-    "CF": 0.1,
-    "NEM": 0.1
+  "holdings": ["CNC", "PFG", "DAL", "JBHT", "HST", "APA", "BEN", "CF", "NEM", "VTRS"],
+  "shares": {
+    "CNC": 7.246,
+    "PFG": 4.271,
+    "DAL": 5.476,
+    "JBHT": 1.509,
+    "HST": 17.666,
+    "APA": 10.304,
+    "BEN": 11.85,
+    "CF": 3.11,
+    "NEM": 3.281,
+    "VTRS": 22.254
   },
-  "sector_counts": {
-    "Energy": 2,
-    "Healthcare": 2,
-    "Real Estate": 1,
-    "Financial Services": 1,
-    "Industrials": 2,
-    "Basic Materials": 2
+  "entry_prices": {
+    "CNC": 60.99,
+    "PFG": 103.49,
+    "DAL": 80.71,
+    "JBHT": 253.71,
+    "HST": 21.68,
+    "APA": 37.17,
+    "BEN": 32.32,
+    "CF": 123.12,
+    "NEM": 116.70,
+    "VTRS": 17.21
+  },
+  "peak_prices": {
+    "CNC": 61.05,
+    "PFG": 103.57,
+    "DAL": 80.57,
+    "JBHT": 278.11,
+    "HST": 23.39,
+    "APA": 38.04,
+    "BEN": 31.02,
+    "CF": 114.45,
+    "NEM": 107.58,
+    "VTRS": 15.70
+  },
+  "entry_dates": {
+    "CNC": "2026-05-01",
+    "PFG": "2026-05-01",
+    "DAL": "2026-05-01",
+    "JBHT": "2026-05-01",
+    "HST": "2026-05-01",
+    "APA": "2026-05-01",
+    "BEN": "2026-05-01",
+    "CF": "2026-05-01",
+    "NEM": "2026-05-01",
+    "VTRS": "2026-05-01"
+  },
+  "cash": 405.25,
+  "portfolio_size": 4427.43,
+  "last_rebalance_date": "2026-05-01",
+  "exits_since_rebalance": 0,
+  "weights": {
+    "CNC": 0.1, "PFG": 0.1, "DAL": 0.1, "JBHT": 0.1, "HST": 0.1,
+    "APA": 0.1, "BEN": 0.1, "CF": 0.1, "NEM": 0.1, "VTRS": 0.1
+  },
+  "regime": {
+    "equity_fraction": 1.0,
+    "regime_triggered": false,
+    "crash_triggered": false
   },
   "llm_exits": [],
   "llm_boosts": [],
   "llm_half_weight": [],
-  "regime": {
-    "equity_fraction": 1.0,
-    "momentum_weight_adj": 1.0,
-    "value_weight_adj": 1.0,
-    "regime_triggered": false,
-    "crash_triggered": false
-  },
-  "sells": [
-    "DELL",
-    "HPE"
-  ]
+  "sector_counts": {}
 }
