@@ -33,8 +33,11 @@ jobs:
         id: check
         run: |
           python run_daily_check.py
-          echo "alert=$([ -f /tmp/daily_report.html ] && echo true || echo false)" >> $GITHUB_OUTPUT
           echo "rebalance=$([ -f /tmp/rebalance_needed ] && echo true || echo false)" >> $GITHUB_OUTPUT
+
+      - name: Set date
+        id: date
+        run: echo "today=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
 
       - name: Commit updated portfolio state
         run: |
@@ -44,15 +47,14 @@ jobs:
           git diff --staged --quiet || git commit -m "chore: daily check $(date +%Y-%m-%d)"
           git push
 
-      - name: Send alert email
-        if: steps.check.outputs.alert == 'true'
+      - name: Send daily email
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
           server_port: 587
           username: ${{ secrets.EMAIL_ADDRESS }}
           password: ${{ secrets.EMAIL_APP_PASSWORD }}
-          subject: "🚨 Portfolio Alert — ${{ github.event.repository.name }}"
+          subject: "📊 Daily Portfolio — ${{ steps.date.outputs.today }}"
           to: ${{ secrets.EMAIL_ADDRESS }}
           from: ${{ secrets.EMAIL_ADDRESS }}
           html_body: file:///tmp/daily_report.html
