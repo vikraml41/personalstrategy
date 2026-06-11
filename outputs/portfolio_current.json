@@ -7,7 +7,6 @@
     "HST",
     "APA",
     "BEN",
-    "CF",
     "VTRS"
   ],
   "shares": {
@@ -18,7 +17,6 @@
     "HST": 17.666,
     "APA": 10.304,
     "BEN": 11.85,
-    "CF": 3.11,
     "VTRS": 22.254
   },
   "entry_prices": {
@@ -29,20 +27,19 @@
     "HST": 21.68,
     "APA": 37.17,
     "BEN": 32.32,
-    "CF": 123.12,
     "VTRS": 17.21
   },
   "peak_prices": {
     "CNC": 66.20999908447266,
-    "PFG": 109.20999908447266,
-    "DAL": 81.16999816894531,
-    "JBHT": 288.1700134277344,
+    "PFG": 109.69000244140625,
+    "DAL": 81.83000183105469,
+    "JBHT": 289.1400146484375,
     "HST": 24.6200008392334,
     "APA": 38.369998931884766,
     "BEN": 31.969999313354492,
     "CF": 117.5199966430664,
     "NEM": 109.5,
-    "VTRS": 16.200000762939453
+    "VTRS": 16.309999465942383
   },
   "entry_dates": {
     "CNC": "2026-05-01",
@@ -59,7 +56,7 @@
   "cash": 405.25,
   "portfolio_size": 4427.43,
   "last_rebalance_date": "2026-05-01",
-  "exits_since_rebalance": 1,
+  "exits_since_rebalance": 2,
   "weights": {
     "CNC": 0.1,
     "PFG": 0.1,
@@ -68,7 +65,6 @@
     "HST": 0.1,
     "APA": 0.1,
     "BEN": 0.1,
-    "CF": 0.1,
     "VTRS": 0.1
   },
   "regime": {
@@ -85,6 +81,11 @@
       "ticker": "NEM",
       "date": "2026-06-05",
       "reason": "Hard stop hit: -14.6% from entry (stop was $102.70)"
+    },
+    {
+      "ticker": "CF",
+      "date": "2026-06-11",
+      "reason": "Hard stop hit: -13.5% from entry (stop was $108.35)"
     }
   ]
 }
