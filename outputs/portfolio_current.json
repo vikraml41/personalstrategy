@@ -1,7 +1,6 @@
 {
   "holdings": [
     "VLO",
-    "APA",
     "VTRS",
     "AIZ",
     "BEN",
@@ -13,7 +12,6 @@
   ],
   "weights": {
     "VLO": 0.1,
-    "APA": 0.1,
     "VTRS": 0.1,
     "AIZ": 0.1,
     "BEN": 0.1,
@@ -82,7 +80,6 @@
   "sells": [],
   "shares": {
     "VLO": 1.712,
-    "APA": 10.304,
     "VTRS": 22.254,
     "AIZ": 1.696,
     "BEN": 11.85,
@@ -94,7 +91,6 @@
   },
   "entry_prices": {
     "VLO": 258.6700134277344,
-    "APA": 37.17,
     "VTRS": 17.21,
     "AIZ": 260.989990234375,
     "BEN": 32.32,
@@ -108,7 +104,7 @@
     "VLO": 266.32000732421875,
     "APA": 38.369998931884766,
     "VTRS": 16.479999542236328,
-    "AIZ": 267.9800109863281,
+    "AIZ": 268.5299987792969,
     "BEN": 33.93000030517578,
     "TGT": 141.1999969482422,
     "BIIB": 216.6300048828125,
@@ -129,7 +125,14 @@
     "MO": "2026-06-12"
   },
   "last_rebalance_date": "2026-06-12",
-  "exits_since_rebalance": 0,
+  "exits_since_rebalance": 1,
   "portfolio_size": 4427.43,
-  "cash": 405.25
+  "cash": 405.25,
+  "historical_exits": [
+    {
+      "ticker": "APA",
+      "date": "2026-06-30",
+      "reason": "Hard stop hit: -12.4% from entry (stop was $32.71)"
+    }
+  ]
 }
