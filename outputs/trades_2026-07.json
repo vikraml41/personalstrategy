@@ -1,0 +1,28 @@
+{
+  "date": "2026-07-01",
+  "month": "2026-07",
+  "buys": [
+    "APA",
+    "EXPD",
+    "HST",
+    "L",
+    "PFG"
+  ],
+  "sells": [
+    "BIIB",
+    "MO",
+    "TGT"
+  ],
+  "holdings_after": [
+    "APA",
+    "BIIB",
+    "CF",
+    "EXPD",
+    "FDX",
+    "HST",
+    "L",
+    "PFG",
+    "VLO",
+    "VTRS"
+  ]
+}
