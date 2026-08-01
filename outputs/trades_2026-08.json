@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-01",
+  "month": "2026-08",
+  "buys": [
+    "AIZ",
+    "CNC",
+    "DAL",
+    "TGT"
+  ],
+  "sells": [
+    "BIIB",
+    "CF",
+    "EXPD",
+    "FDX"
+  ],
+  "holdings_after": [
+    "AIZ",
+    "APA",
+    "CF",
+    "CNC",
+    "DAL",
+    "FDX",
+    "HST",
+    "PFG",
+    "TGT",
+    "VTRS"
+  ]
+}
